@@ -15,6 +15,8 @@ public class CorsaBean implements java.io.Serializable{
 		this.IDCorsa = -1;
 		this.IDFDipedente = -1;
 		this.IDFTukTuk = -1;
+		this.DataInizio = null;
+		this.DataFine = null;
 		this.Chilometri = -1;
 		this.TariffaCorsa = -1;
 	}

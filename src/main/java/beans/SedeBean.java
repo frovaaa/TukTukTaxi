@@ -9,7 +9,12 @@ public class SedeBean implements java.io.Serializable{
     private int NCivico;
 
     public SedeBean(){
-
+    	this.IDSede = -1;
+    	this.Paese = "";
+    	this.Citta = "";
+    	this.CAP = "";
+    	this.Via = "";
+    	this.NCivico = -1;
     }
 
     public int getIDSede() {

@@ -6,13 +6,17 @@ public class OperazioneManutenzione implements java.io.Serializable{
     private int IDOperazione;
     private int IDFDipendente;
     private int IDFTukTuk;
-    private int Descrizione;
+    private String Descrizione;
     private LocalDate DataInizioOperazione;
     private LocalDate DataFineOperazione;
 
     public OperazioneManutenzione(){
-        DataFineOperazione = null;
-        DataInizioOperazione = null;
+    	this.IDOperazione = -1;
+    	this.IDFDipendente = -1;
+    	this.IDFTukTuk = -1;
+    	this.Descrizione = "";
+        this.DataFineOperazione = null;
+        this.DataInizioOperazione = null;
     }
 
 
@@ -40,11 +44,11 @@ public class OperazioneManutenzione implements java.io.Serializable{
         this.IDFTukTuk = IDFTukTuk;
     }
 
-    public int getDescrizione() {
+    public String getDescrizione() {
         return this.Descrizione;
     }
 
-    public void setDescrizione(int Descrizione) {
+    public void setDescrizione(String Descrizione) {
         this.Descrizione = Descrizione;
     }
 

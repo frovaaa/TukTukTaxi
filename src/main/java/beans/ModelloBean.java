@@ -7,7 +7,10 @@ public class ModelloBean implements java.io.Serializable{
     private int NumeroPosti;
 
     public ModelloBean(){
-
+    	this.IDModello = -1;
+    	this.NomeModello = "";
+    	this.TipoMotore = "";
+    	this.NumeroPosti = -1;
     }
 
     public int getIDModello(){ return IDModello; }

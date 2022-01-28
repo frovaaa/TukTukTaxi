@@ -11,7 +11,12 @@ public class TukTukBean implements java.io.Serializable{
     private LocalDate DataAcquisto;
 
     public TukTukBean(){
-
+    	this.IDOperazione = -1;
+    	this.IDFModello = -1;
+    	this.IDFSede = -1;
+    	this.Targa = "";
+    	this.NumeroDiTelaio = "";
+    	this.DataAcquisto = null;
     }
 
     public int getIDOperazione() {
