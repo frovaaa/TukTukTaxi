@@ -12,8 +12,11 @@ public class CorsaBean implements java.io.Serializable{
 	private float TariffaCorsa;
 	
 	public CorsaBean() {
-		this.Chilometri = 0;
-		this.TariffaCorsa = 0;
+		this.IDCorsa = -1;
+		this.IDFDipedente = -1;
+		this.IDFTukTuk = -1;
+		this.Chilometri = -1;
+		this.TariffaCorsa = -1;
 	}
 
 	public int getIDCorsa() {
