@@ -1,7 +1,10 @@
 package ConnessioneDB;
 
 import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.beans.*;
 
 public class ConnessioneDB {
@@ -19,13 +22,18 @@ public class ConnessioneDB {
 			System.out.print(ex.getMessage());
 		}
 		
-		
+		try {
+			connessione = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
+			
+		}catch(SQLException ex){
+			
+		}
 		
 		return connessione;
 		
 	}
 
-	public static boolean GetUtenti() throws SQLException {
+	public static boolean GetUtenti(String Username, String Passwd) throws Exception {
 		Connection c = null;
 		Statement s = null;
 		Boolean flag = false;
@@ -33,10 +41,18 @@ public class ConnessioneDB {
 		try {
 			c = Connetti();
 			s = c.createStatement();
-			String query = "SELECT * FROM Dipedente WHERE ";
+			String query = "SELECT * FROM Dipedente WHERE Username = '"+Username+"' AND Password = '"+Passwd+"'";
 			
+			ResultSet ListaUtenti = s.executeQuery(query);
+			
+			while(ListaUtenti.next()) { flag = true; }
 		}catch (SQLException ex) {
-			
+			System.out.println(ex.getMessage());
+		}finally {
+			s.close();
+			c.close();
 		}
+		
+		return flag;
 	}
 }
