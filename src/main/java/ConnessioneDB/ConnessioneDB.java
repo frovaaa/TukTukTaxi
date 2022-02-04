@@ -49,8 +49,8 @@ public class ConnessioneDB {
 		}catch (SQLException ex) {
 			System.out.println(ex.getMessage());
 		}finally {
-			s.close();
-			c.close();
+			if(s != null) s.close();
+			if(c != null) c.close();
 		}
 		
 		return flag;
