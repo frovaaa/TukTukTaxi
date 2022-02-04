@@ -94,7 +94,7 @@
 <div>
     <div class="container">
         <div id="formDiv">
-            <form action="" method="post">
+            <form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
                 <div class="form-block">
                     <div id="title">
                         <h2>Login</h2>
