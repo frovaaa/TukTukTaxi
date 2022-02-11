@@ -8,10 +8,9 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
-	<classpathentry kind="lib" path="C:/xampp/tomcat/lib/servlet-api.jar"/>
 	<classpathentry kind="lib" path="C:/xampp/tomcat/apache-tomcat-10.0.13/lib/servlet-api.jar">
 		<attributes>
-			<attribute name="javadoc_location" value="https://jakarta.ee/specifications/servlet/5.0/apidocs/"/>
+			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>

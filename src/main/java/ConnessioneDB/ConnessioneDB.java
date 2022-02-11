@@ -8,8 +8,8 @@ import java.sql.Statement;
 import java.beans.*;
 
 public class ConnessioneDB {
-	private static final String DB_DRIVER = "com.mysql.jdbc.Driver";
-	private static final String DB_CONNECTION = "jdbc:mysqli://database.paolopocaterra.eu/TukTukDB";
+	private static final String DB_DRIVER = "org.mariadb.jdbc.Driver";
+	private static final String DB_CONNECTION = "jdbc:mariadb://database.paolopocaterra.eu:3306/TukTukDB";
 	private static final String DB_USER = "Frova";
 	private static final String DB_PASSWORD = "8?}t*dveV5Uq?){p";
 	
@@ -20,6 +20,7 @@ public class ConnessioneDB {
 			Class.forName(DB_DRIVER);
 		}catch (Exception ex){
 			System.out.print(ex.getMessage());
+			throw new RuntimeException(ex);
 		}
 		
 		try {
@@ -27,6 +28,7 @@ public class ConnessioneDB {
 			System.out.println("Connessione avvenuta!!");
 		}catch(SQLException ex){
 			System.out.println(ex.getMessage());
+			throw new RuntimeException(ex);
 		}
 		
 		return connessione;
@@ -41,7 +43,7 @@ public class ConnessioneDB {
 		try {
 			c = Connetti();
 			s = c.createStatement();
-			String query = "SELECT * FROM Dipedente WHERE Username = '"+Username+"' AND Password = '"+Passwd+"'";
+			String query = "SELECT * FROM Dipendente WHERE Username = '"+Username+"' AND Password = '"+Passwd+"'";
 			
 			ResultSet ListaUtenti = s.executeQuery(query);
 			
