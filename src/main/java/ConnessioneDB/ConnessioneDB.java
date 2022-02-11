@@ -24,9 +24,9 @@ public class ConnessioneDB {
 		
 		try {
 			connessione = DriverManager.getConnection(DB_CONNECTION, DB_USER, DB_PASSWORD);
-			
+			System.out.println("Connessione avvenuta!!");
 		}catch(SQLException ex){
-			
+			System.out.println(ex.getMessage());
 		}
 		
 		return connessione;
