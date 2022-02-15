@@ -12,23 +12,33 @@
             <form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
                 <div class="form-block">
                     <div id="title">
-                        <h2>Login</h2>
+                        <h2>Registra dipendente</h2>
                     </div>
                 </div>
                 <div class="form-block">
-                    <input class="form-input" name="username" placeholder="Username" type="text" required>
+                    <input class="form-input" name="nome" placeholder="Nome" type="text" required>
                 </div>
                 <div class="form-block">
-                    <input class="form-input" name="password" placeholder="Password" type="password" required>
+                    <input class="form-input" name="cognome" placeholder="Cognome" type="text" required>
                 </div>
                 <div class="form-block">
-                    <div id="subDiv">
-                        <input type="checkbox" name="rememberMe" id="rememberMe">
-                        <label for="rememberMe">Remember me?</label>
+                    <input class="form-input" name="cellulare" placeholder="Telefono" type="tel" required>
+                </div>
+                <div class="form-block">
+                    <input class="form-input" name="email" placeholder="E-Mail" type="email" required>
+                </div>
+                <div class="form-block">
+                	<div id="subDiv">
+                		<div class="orizDiv">
+                			<input class="form-input" name="username" placeholder="Username" type="text" required>	
+                		</div>
+                		<div class="orizDiv">
+                			<input class="form-input" name="password" placeholder="Password" type="password" required>
+                		</div>
                     </div>
                 </div>
                 <div class="form-block">
-                    <button class="btn" type="submit">Login</button>
+                    <button class="btn" type="submit">Registra dipendente</button>
                 </div>
             </form>
         </div>
@@ -89,6 +99,12 @@
 
     font-size: medium; font-weight: bold;
     color: rgba(0, 0, 0, 0.6);
+}
+.orizDiv{
+}
+
+#destra{
+	margin-left: 10%;
 }
 
 .btn{
