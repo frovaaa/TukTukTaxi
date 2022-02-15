@@ -36,6 +36,7 @@ public class ConnessioneDB_servlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
+	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
@@ -44,9 +45,14 @@ public class ConnessioneDB_servlet extends HttpServlet {
 		ConnessioneDB saveUtenti = new ConnessioneDB();
 		
 		try {
-			boolean Esiste=saveUtenti.GetUtenti(username, password);
-			if(Esiste) System.out.println("Utente trovato");
-			else System.out.println("Utente NON trovato");
+			boolean Esiste = saveUtenti.GetUtenti(username, password);
+			if(Esiste) { 
+				System.out.println("Utente trovato"); 
+				response.sendRedirect("Risposte/BuonFine.jsp");
+			} else {
+				System.out.println("Utente NON trovato");
+				response.sendRedirect("login.jsp");
+			}
 		}
 		catch (SQLException e){
 			e.printStackTrace();
