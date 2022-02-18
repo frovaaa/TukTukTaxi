@@ -9,7 +9,7 @@
 <body>
 	<div class="container">
         <div id="formDiv">
-            <form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
+            <form action="/TukTukTaxi/Register_servlet" method="post">
                 <div class="form-block">
                     <div id="title">
                         <h2>Registra dipendente</h2>
