@@ -57,4 +57,48 @@ public class ConnessioneDB {
 		
 		return flag;
 	}
+	public static boolean SetUtenti(String sede, String nome, String cognome, String telefono, String email, String user, String pass) throws Exception {
+		Connection c = null;
+		Statement s = null;
+		Boolean flag = false;
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			
+			if(GetSede(sede) == null) flag = false;
+			String idSede = GetSede(sede).getString("IDSede");
+			
+			String query = "INSERT INTO Dipendente (IDFSede, Nome, Cognome, Cellulare, Email, Username, Password) VALUES ("+idSede+", '"+nome+"', '"+cognome+"', '"+telefono+"',  '"+email+"', '"+user+"', '"+pass+"',)";
+			flag = s.execute(query);
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+		
+		return flag;
+	}
+	
+	public static ResultSet GetSede(String nome) throws Exception {
+		Connection c = null;
+		Statement s = null;
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			String query = "SELECT IDSede FROM Sede WHERE Nome = '"+nome+"'";
+			
+			ResultSet ListaSedi = s.executeQuery(query);
+			
+			return ListaSedi;
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+			return null;
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+	}
 }

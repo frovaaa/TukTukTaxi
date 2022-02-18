@@ -7,6 +7,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.beans.*;
+import ConnessioneDB.ConnessioneDB;
 
 /**
  * Servlet implementation class Register_servlet
@@ -35,7 +36,9 @@ public class Register_servlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		ConnessioneDB c = new ConnessioneDB();
 		
+		c.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"))
 	}
 
 }
