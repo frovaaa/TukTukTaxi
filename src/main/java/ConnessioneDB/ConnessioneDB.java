@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.beans.*;
 
 public class ConnessioneDB {
@@ -106,4 +107,21 @@ public class ConnessioneDB {
 			if(c != null) c.close();
 		}
 	}
+	
+    public static ArrayList<String> getSedi() throws Exception {
+    	ArrayList<String> listaSedi = new ArrayList<String>();
+    	Connection c = null;
+    	Statement s = null;
+    	
+    	try {
+    		
+    	} catch (SQLException ex) {
+    		System.out.println(ex.getMessage());
+    	}
+    	
+    	
+    	return listaSedi;
+    }
+	
+	
 }
