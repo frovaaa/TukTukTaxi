@@ -16,6 +16,9 @@
                     </div>
                 </div>
                 <div class="form-block">
+                    <input class="form-input" name="sede" placeholder="Sede" type="text" required>
+                </div>
+                <div class="form-block">
                     <input class="form-input" name="nome" placeholder="Nome" type="text" required>
                 </div>
                 <div class="form-block">
