@@ -1,5 +1,7 @@
 package beans;
 
+import java.util.ArrayList;
+
 public class SedeBean implements java.io.Serializable{
     private int IDSede;
     private String Paese;
@@ -63,6 +65,14 @@ public class SedeBean implements java.io.Serializable{
 
     public void setNCivico(int NCivico) {
         this.NCivico = NCivico;
+    }
+    
+    public ArrayList<String> getSedi() {
+    	ArrayList<String> listaSedi = new ArrayList<String>();
+    	
+    	
+    	
+    	return listaSedi;
     }
 
 }
