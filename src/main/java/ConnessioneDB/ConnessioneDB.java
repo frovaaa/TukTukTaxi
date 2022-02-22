@@ -114,14 +114,23 @@ public class ConnessioneDB {
     	Statement s = null;
     	
     	try {
+    		c = Connetti();
+    		s = c.createStatement();
+    		String query = "SELECT Nome FROM Sede ORDER BY Nome ASC;";
+    		
+    		ResultSet sedi = s.executeQuery(query);
+    		while(sedi.next()) {
+    			listaSedi.add(sedi.getString("Nome"));
+    		}
+    		return listaSedi;
     		
     	} catch (SQLException ex) {
     		System.out.println(ex.getMessage());
+    		return null;
+    	} finally {
+    		if(s != null) s.close();
+    		if(c != null) c.close();
     	}
-    	
-    	
-    	return listaSedi;
     }
-	
-	
+    
 }
