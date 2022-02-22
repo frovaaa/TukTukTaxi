@@ -1,10 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1"
+    
+    import = "java.util.ArrayList";
+    %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Inserisci dipendente</title>
 </head>
 <body>
 	<div class="container">
@@ -16,7 +19,17 @@
                     </div>
                 </div>
                 <div class="form-block">
-                    <input class="form-input" name="sede" placeholder="Sede" type="text" required>
+                	<select name="sede">
+                		<jsp:useBean id="sede" class="ConnessioneDB.ConnessioneDB"></jsp:useBean>
+                		<%
+                			ArrayList<String> r = sede.getSedi();
+                			
+                			r.forEach(temp -> out.print("<option value="+temp+">"+temp+"</option>"));
+                		%>
+                	</select>
+                </div>
+                <div class="form-block">
+                    <input class="form-input" placeholder="Sede" type="text" required>
                 </div>
                 <div class="form-block">
                     <input class="form-input" name="nome" placeholder="Nome" type="text" required>
