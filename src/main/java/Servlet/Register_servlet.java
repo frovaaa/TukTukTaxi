@@ -30,7 +30,11 @@ public class Register_servlet extends HttpServlet {
 		ConnessioneDB c = new ConnessioneDB();
 		
 		try {
-			ConnessioneDB.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"));
+			if(ConnessioneDB.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"))) {
+				response.sendRedirect("");
+			} else {
+				response.sendRedirect("signup.jsp");
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
