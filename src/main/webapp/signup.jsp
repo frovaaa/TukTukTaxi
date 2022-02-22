@@ -24,7 +24,13 @@
                 		<%
                 			ArrayList<String> r = sede.getSedi();
                 			
-                			r.forEach(temp -> out.print("<option value="+temp+">"+temp+"</option>"));
+                			try{
+                				r.forEach((temp) -> { %>
+                					<option value=""><%= temp %></option> 
+                			<%	});
+                			}catch (Exception e){
+                				out.println(e.getMessage());
+                			}
                 		%>
                 	</select>
                 </div>
