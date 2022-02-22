@@ -9,9 +9,6 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.beans.*;
 import ConnessioneDB.ConnessioneDB;
 
-/**
- * Servlet implementation class Register_servlet
- */
 @WebServlet("/Register_servlet")
 public class Register_servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -38,7 +35,11 @@ public class Register_servlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ConnessioneDB c = new ConnessioneDB();
 		
-		c.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"))
+		try {
+			ConnessioneDB.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
