@@ -1,8 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
-    
-    import = "java.util.ArrayList";
-    %>
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -20,18 +18,7 @@
                 </div>
                 <div class="form-block">
                 	<select name="sede">
-                		<jsp:useBean id="sede" class="ConnessioneDB.ConnessioneDB"></jsp:useBean>
-                		<%
-                			ArrayList<String> r = sede.getSedi();
-                			
-                			try{
-                				r.forEach((temp) -> { %>
-                					<option value=""><%= temp %></option> 
-                			<%	});
-                			}catch (Exception e){
-                				out.println(e.getMessage());
-                			}
-                		%>
+                		
                 	</select>
                 </div>
                 <div class="form-block">
