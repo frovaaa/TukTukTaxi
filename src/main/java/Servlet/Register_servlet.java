@@ -2,6 +2,8 @@ package Servlet;
 
 import jakarta.servlet.http.HttpServlet;
 import java.io.IOException;
+import java.util.ArrayList;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -24,7 +26,15 @@ public class Register_servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		
+		ConnessioneDB c = new ConnessioneDB();
+		try {
+			ArrayList<String> sedi = c.getSedi();
+			request.getSession().setAttribute("Sedi", sedi);
+			response.sendRedirect("signup.jsp");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
