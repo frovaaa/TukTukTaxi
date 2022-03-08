@@ -26,9 +26,8 @@ public class Register_servlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		ConnessioneDB c = new ConnessioneDB();
 		try {
-			ArrayList<String> sedi = c.getSedi();
+			ArrayList<String> sedi = ConnessioneDB.getSedi();
 			request.getSession().setAttribute("Sedi", sedi);
 			response.sendRedirect("signup.jsp");
 		} catch (Exception e) {
