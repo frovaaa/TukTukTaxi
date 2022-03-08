@@ -30,15 +30,12 @@
                 		if(listaSedi != null){
 	                		for(String sede : listaSedi){
 	                			%>
-	                			<option><%=sede %></option>
+	                			<option value=<%="'"+sede+"'" %> ><%=sede %></option>
 	                			<%
 	                		}
                 		}
                 		%>
                 	</select>
-                </div>
-                <div class="form-block">
-                    <input class="form-input" placeholder="Sede" type="text" required>
                 </div>
                 <div class="form-block">
                     <input class="form-input" name="nome" placeholder="Nome" type="text" required>

@@ -38,6 +38,8 @@ public class Register_servlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
+			request.getSession().removeAttribute("Sedi");
+			
 			if(ConnessioneDB.SetUtenti(request.getParameter("sede"), request.getParameter("nome"), request.getParameter("cognome"), request.getParameter("cellulare"), request.getParameter("email"), request.getParameter("username"), request.getParameter("password"))) {
 				response.sendRedirect("");
 			} else {
