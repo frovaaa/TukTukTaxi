@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
+    import = "java.util.ArrayList"
+    %>
+<%
+    ArrayList<String> listaSedi = null;
+                			
+    if(request.getSession().getAttribute("Sedi") != null){
+		listaSedi = (ArrayList<String>)request.getSession().getAttribute("Sedi");
+	}                			
 %>
 <!DOCTYPE html>
 <html>
@@ -18,7 +26,15 @@
                 </div>
                 <div class="form-block">
                 	<select name="sede">
-                		
+                		<%
+                		if(listaSedi != null){
+	                		for(String sede : listaSedi){
+	                			%>
+	                			<option><%=sede %></option>
+	                			<%
+	                		}
+                		}
+                		%>
                 	</select>
                 </div>
                 <div class="form-block">

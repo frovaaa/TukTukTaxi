@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1>Home</h1>
-	<a href="Register_servlet">Registra utente</a>
+	<a href="Register_servlet">Registra utente</a> <br>
 	<a>Login utente</a>
 </body>
 </html>
