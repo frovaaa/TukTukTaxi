@@ -1,7 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
-    	
+   
+   import = "java.util.ArrayList"
+   import = "java.beans.*"
     %>
+    
+    <%
+    ArrayList<beans.DipendenteBean> listaSedi = null;
+                			
+    if(request.getSession().getAttribute("utenti") != null){
+		
+	}                			
+%>
 <!DOCTYPE html>
 <html>
 <head>

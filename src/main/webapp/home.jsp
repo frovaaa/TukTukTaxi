@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Home</h1>
-	<a href="Register_servlet">Registra utente</a> <br>
-	<a>Login utente</a>
+	<a href="Register_servlet">Registra dipendente</a> <br>
+	<a>Login dipendente</a> <br>
+	<a href="listaDipendenti_servlet">Lista dipendenti</a> <br>
 </body>
 </html>

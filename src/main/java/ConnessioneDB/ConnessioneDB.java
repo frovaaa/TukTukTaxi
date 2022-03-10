@@ -132,5 +132,10 @@ public class ConnessioneDB {
     		if(c != null) c.close();
     	}
     }
-    
+   
+    public static ArrayList<beans.DipendenteBean> getDipendenti(){
+    	ArrayList<beans.DipendenteBean> a = null;
+    	
+    	
+    }
 }
