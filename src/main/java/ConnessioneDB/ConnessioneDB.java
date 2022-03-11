@@ -133,9 +133,38 @@ public class ConnessioneDB {
     	}
     }
    
-    public static ArrayList<beans.DipendenteBean> getDipendenti(){
+    public static ArrayList<beans.DipendenteBean> getDipendenti() throws SQLException{
     	ArrayList<beans.DipendenteBean> a = null;
+    	Connection c = null;
+    	Statement s = null;
     	
+    	try {
+    		c = Connetti();
+    		s = c.createStatement();
+    		
+    		String q = "SELECT * FROM Dipendente;";
+    		ResultSet d = s.executeQuery(q);
+    		
+    		while(d.next()) {
+    			beans.DipendenteBean temp = new beans.DipendenteBean();
+    			
+    			temp.setIDFSede(0);
+    			temp.setNome(q);
+    			temp.setCognome(q);
+    			temp.setUsername(q);
+    			temp.setPassword("");
+    			temp.setEmail(q);
+    			temp.setCellulare(q);
+    			
+    			a.add(temp);
+    		}
+    	}catch(Exception ex) {
+    		System.out.println(ex.getMessage());
+    	}finally {
+    		if(s != null) s.close();
+    		if(c != null) c.close();
+    	}
     	
+    	return a;
     }
 }

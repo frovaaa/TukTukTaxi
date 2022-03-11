@@ -26,7 +26,13 @@ public class listaDipendenti_servlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		try {
+			
+		}catch(Exception ex) {
+			
+		}finally {
+			
+		}
 	}
 
 	/**
