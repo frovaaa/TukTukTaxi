@@ -1,8 +1,10 @@
+<%@page import="ConnessioneDB.ConnessioneDB"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
    
    import = "java.util.ArrayList"
    import = "java.beans.*"
+   import = "java.ConnessioneDB.*"
     %>
     
     <%
@@ -43,7 +45,7 @@
   </div>
 </nav>
 
-<div class="container">
+<div class="container" style="margin-top: 5%">
 	<table class="table table-striped">
 		<thead>
 		    <tr>
@@ -63,10 +65,12 @@
 		  			%>
 		  				
 		  			<tr>
-				      <th scope="row">1</th>
-				      <td>Mark</td>
-				      <td>Otto</td>
-				      <td>@mdo</td>
+				      <th scope="row"><%= i %></th>
+				      <td><%= t.getNome() %></td>
+				      <td><%= t.getCognome() %></td>
+				      <td><%= t.getEmail() %></td>
+				      <td><%= t.getCellulare() %></td>
+				      <td><a href=<%="'infoSede_servlet?id="+t.getIDFSede()+"'"%>><%= ConnessioneDB.GetNomeSede(t.getIDFSede()) %></a></td>
 				    </tr>
 		  			
 		  			<%

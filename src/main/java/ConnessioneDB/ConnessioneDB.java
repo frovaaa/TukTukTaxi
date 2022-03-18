@@ -107,6 +107,30 @@ public class ConnessioneDB {
 			if(c != null) c.close();
 		}
 	}
+	public static String GetNomeSede(int id) throws Exception{
+		Connection c = null;
+		Statement s = null;
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			String query = "SELECT Nome FROM Sede WHERE IDSede = '"+id+"'";
+			
+			ResultSet ListaSedi = s.executeQuery(query);
+			ListaSedi.next();
+			
+			System.out.println(query);
+			System.out.println(ListaSedi.getString(1));
+			
+			return ListaSedi.getString(1);
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+			return "";
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+	}
 	
     public static ArrayList<String> getSedi() throws Exception {
     	ArrayList<String> listaSedi = new ArrayList<String>();
@@ -167,5 +191,5 @@ public class ConnessioneDB {
     	
     	return a;
     }
-   
+    
 }
