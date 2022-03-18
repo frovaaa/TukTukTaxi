@@ -7,6 +7,7 @@ public class SedeBean implements java.io.Serializable{
     private String CAP;
     private String Via;
     private int NCivico;
+    private String Telefono;
 
     public SedeBean(){
     	this.IDSede = -1;
@@ -58,5 +59,13 @@ public class SedeBean implements java.io.Serializable{
     public void setNCivico(int NCivico) {
         this.NCivico = NCivico;
     }
+
+	public String getTelefono() {
+		return Telefono;
+	}
+
+	public void setTelefono(String telefono) {
+		Telefono = telefono;
+	}
 
 }
