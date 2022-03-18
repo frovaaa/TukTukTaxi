@@ -24,11 +24,11 @@ public class listaDipendenti_servlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
-			
+			request.getSession().setAttribute("dipendenti", ConnessioneDB.ConnessioneDB.getDipendenti());
 		}catch(Exception ex) {
-			
+			System.out.println(ex.getMessage());
 		}finally {
-			
+			response.sendRedirect("employesList.jsp");
 		}
 	}
 

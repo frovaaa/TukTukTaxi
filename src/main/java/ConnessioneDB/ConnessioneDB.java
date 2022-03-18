@@ -134,7 +134,7 @@ public class ConnessioneDB {
     }
    
     public static ArrayList<beans.DipendenteBean> getDipendenti() throws SQLException{
-    	ArrayList<beans.DipendenteBean> a = null;
+    	ArrayList<beans.DipendenteBean> a = new ArrayList<beans.DipendenteBean>();
     	Connection c = null;
     	Statement s = null;
     	
@@ -148,13 +148,13 @@ public class ConnessioneDB {
     		while(d.next()) {
     			beans.DipendenteBean temp = new beans.DipendenteBean();
     			
-    			temp.setIDFSede(0);
-    			temp.setNome(q);
-    			temp.setCognome(q);
-    			temp.setUsername(q);
-    			temp.setPassword("");
-    			temp.setEmail(q);
-    			temp.setCellulare(q);
+    			temp.setIDFSede(d.getInt("IDFSede"));
+    			temp.setNome(d.getString("Nome"));
+    			temp.setCognome(d.getString("Cognome"));
+    			temp.setUsername(d.getString("Username"));
+    			temp.setPassword("pass");
+    			temp.setEmail(d.getString("Email"));
+    			temp.setCellulare(d.getString("Cellulare"));
     			
     			a.add(temp);
     		}
@@ -167,4 +167,5 @@ public class ConnessioneDB {
     	
     	return a;
     }
+   
 }
