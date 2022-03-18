@@ -20,7 +20,6 @@ public class SedeBean implements java.io.Serializable{
     public int getIDSede() {
         return this.IDSede;
     }
-
     public void setIDSede(int IDSede) {
         this.IDSede = IDSede;
     }
@@ -28,7 +27,6 @@ public class SedeBean implements java.io.Serializable{
     public String getPaese() {
         return this.Paese;
     }
-
     public void setPaese(String Paese) {
         this.Paese = Paese;
     }
@@ -36,7 +34,6 @@ public class SedeBean implements java.io.Serializable{
     public String getCitta() {
         return this.Citta;
     }
-
     public void setCitta(String Citta) {
         this.Citta = Citta;
     }
@@ -44,7 +41,6 @@ public class SedeBean implements java.io.Serializable{
     public String getCAP() {
         return this.CAP;
     }
-
     public void setCAP(String CAP) {
         this.CAP = CAP;
     }
@@ -52,7 +48,6 @@ public class SedeBean implements java.io.Serializable{
     public String getVia() {
         return this.Via;
     }
-
     public void setVia(String Via) {
         this.Via = Via;
     }
@@ -60,7 +55,6 @@ public class SedeBean implements java.io.Serializable{
     public int getNCivico() {
         return this.NCivico;
     }
-
     public void setNCivico(int NCivico) {
         this.NCivico = NCivico;
     }

@@ -39,32 +39,28 @@
 </nav>
 <body style="background-color: rgb(240, 239, 244);">
 <div>
-    <div class="container">
-    	<a href="Register_servlet">Registra utente</a>
-        <div id="formDiv">
-            <form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
+    <div class="container" style="margin: 5% 5%; margin-left: 50%; transform: translate(-50%);">
+    	<form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
                 <div class="form-block">
                     <div id="title">
                         <h2>Login</h2>
                     </div>
                 </div>
-                <div class="form-block">
-                    <input class="form-input" name="username" placeholder="Username" type="text" required>
+                <div class="mb-3">
+                    <input  class="form-control" name="username" placeholder="Username" type="text" required>
                 </div>
-                <div class="form-block">
-                    <input class="form-input" name="password" placeholder="Password" type="password" required>
+                <div class="mb-3">
+                    <input  class="form-control" name="password" placeholder="Password" type="password" required>
                 </div>
-                <div class="form-block">
-                    <div id="subDiv">
-                        <input type="checkbox" name="rememberMe" id="rememberMe">
-                        <label for="rememberMe">Remember me?</label>
-                    </div>
+                <div class="form-check">
+                	<input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe">
+                    <label class="form-check-label" for="rememberMe">Remember me?</label>
                 </div>
-                <div class="form-block">
-                    <button class="btn" type="submit">Login</button>
+                <div class="mb-3">
+                    <button class="btn btn-primary" type="submit">Login</button>
                 </div>
             </form>
-        </div>
+        <a href="Register_servlet">Registra utente</a>
     </div>
 </div>
 </body>
