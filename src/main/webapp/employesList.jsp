@@ -70,7 +70,7 @@
 				      <td><%= t.getCognome() %></td>
 				      <td><%= t.getEmail() %></td>
 				      <td><%= t.getCellulare() %></td>
-				      <td><a href=<%="'infoSede_servlet?id="+t.getIDFSede()+"'"%>><%= ConnessioneDB.GetNomeSede(t.getIDFSede()) %></a></td>
+				      <td><a href=<%="'/TukTukTaxi/infoSede_servlet?id="+t.getIDFSede()+"'"%>><%= ConnessioneDB.GetNomeSede(t.getIDFSede()) %></a></td>
 				    </tr>
 		  			
 		  			<%
