@@ -29,8 +29,5 @@
     </div>
   </div>
 </nav>
-	<a href="Register_servlet">Registra dipendente</a> <br>
-	<a>Login dipendente</a> <br>
-	<a href="listaDipendenti_servlet">Lista dipendenti</a> <br>
 </body>
 </html>
