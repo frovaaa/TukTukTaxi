@@ -8,9 +8,9 @@
 %>
 
 <%
-    SedeBean sede = null;
+    beans.SedeBean sede = null;
     if (request.getSession().getAttribute("sede") != null) {
-        sede = (SedeBean<beans.SedeBean>) request.getSession().getAttribute("sede");
+        sede = (beans.SedeBean) request.getSession().getAttribute("sede");
     }
 %>
 <!DOCTYPE html>

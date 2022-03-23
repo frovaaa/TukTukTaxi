@@ -2,6 +2,7 @@ package beans;
 
 public class SedeBean implements java.io.Serializable{
     private int IDSede;
+    private String Nome;
     private String Paese;
     private String Citta;
     private String CAP;
@@ -18,8 +19,15 @@ public class SedeBean implements java.io.Serializable{
     	this.NCivico = -1;
     }
 
-    public int getIDSede() {
-        return this.IDSede;
+    public String getNome() {
+        return this.Nome;
+    }
+    public void setNome(String Nome) {
+        this.Nome = Nome;
+    }
+    
+    public String getIDSede() {
+        return ""+IDSede;
     }
     public void setIDSede(int IDSede) {
         this.IDSede = IDSede;
