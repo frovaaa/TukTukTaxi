@@ -48,11 +48,15 @@ public class ConnessioneDB_servlet extends HttpServlet {
 			boolean Esiste = saveUtenti.GetUtenti(username, password);
 			if(Esiste) { 
 				System.out.println("Utente trovato"); 
-				response.sendRedirect("Risposte/BuonFine.jsp");
+				response.sendRedirect("home.jsp");
 			} else {
 				System.out.println("Utente NON trovato");
+				
+				request.getSession().setAttribute("error", "Login fallito! Riprova!");
 				response.sendRedirect("login.jsp");
 			}
+			
+			request.getSession().setAttribute("log", Esiste);
 		}
 		catch (SQLException e){
 			e.printStackTrace();
