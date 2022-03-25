@@ -2,67 +2,36 @@
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="ISO-8859-1">
-	<meta name="viewport"
-		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<!-- CSS only BOOTSTRAP-->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-		
-	<!--BOOTSTRAP ICONS -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-	<title>Login</title>
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">TukTukTaxi</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="home.jsp">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login.jsp">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"href="listaDipendenti_servlet">Lista dipendenti</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<body style="background-color: rgb(240, 239, 244);">
-<div>
-    <div class="container" style="margin: 5% 5%; margin-left: 50%; transform: translate(-50%);">
-    	<form action="/TukTukTaxi/ConnessioneDB_servlet" method="post">
-                <div class="form-block">
-                    <div id="title">
-                        <h2>Login</h2>
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <input  class="form-control" name="username" placeholder="Username" type="text" required>
-                </div>
-                <div class="mb-3">
-                    <input  class="form-control" name="password" placeholder="Password" type="password" required>
-                </div>
-                <div class="form-check">
-                	<input class="form-check-input" type="checkbox" name="rememberMe" id="rememberMe">
-                    <label class="form-check-label" for="rememberMe">Remember me?</label>
-                </div>
-                <div class="mb-3">
-                    <button class="btn btn-primary" type="submit">Login</button>
-                </div>
-            </form>
-        <a href="Register_servlet">Registra utente</a>
-    </div>
-</div>
-</body>
+	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title></title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/sign-in/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="CSS/signin.css" rel="stylesheet">
+  </head>
+<body class="text-center">
+	<form class="form-signin">
+     	<h1 class="h3 mb-3 font-weight-normal">Login</h1>
+      <label for="inputUser" class="sr-only">Username</label>
+      <input type="email" id="inputUser" class="form-control" placeholder="Username" required="" autofocus="" name="username">
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password">
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me" name="rememberMe"> Remember me
+        </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+	</form>
 </body>
 </html>
