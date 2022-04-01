@@ -1,4 +1,4 @@
-<%@page import="ConnessioneDB.ConnessioneDB"%>
+<%@ page import="ConnessioneDB.ConnessioneDB"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"
    
@@ -9,10 +9,16 @@
     
     <%
     ArrayList<beans.DipendenteBean> listaDipendenti = null;
-                			
+    
     if(request.getSession().getAttribute("dipendenti") != null){
+    	System.out.println("hdjkshkagdhsajkdgsajkdkjgadjjksagdkdgjasd");
 		listaDipendenti = (ArrayList<beans.DipendenteBean>) request.getSession().getAttribute("dipendenti");
-	}                			
+	}
+    
+    if(listaDipendenti == null) {
+		response.sendRedirect("home.jsp");
+		return;
+	}
 %>
 <!DOCTYPE html>
 <html>

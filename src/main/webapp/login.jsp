@@ -20,10 +20,10 @@
     <link href="CSS/signin.css" rel="stylesheet">
   </head>
 <body class="text-center">
-	<form class="form-signin">
+	<form class="form-signin" action="ConnessioneDB_servlet" method="POST">
      	<h1 class="h3 mb-3 font-weight-normal">Login</h1>
       <label for="inputUser" class="sr-only">Username</label>
-      <input type="email" id="inputUser" class="form-control" placeholder="Username" required="" autofocus="" name="username">
+      <input type="text" id="inputUser" class="form-control" placeholder="Username" required="" autofocus="" name="username">
       <label for="inputPassword" class="sr-only">Password</label>
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password">
       <div class="checkbox mb-3">
