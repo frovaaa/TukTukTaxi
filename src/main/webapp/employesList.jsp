@@ -14,7 +14,7 @@
     	System.out.println("hdjkshkagdhsajkdgsajkdkjgadjjksagdkdgjasd");
 		listaDipendenti = (ArrayList<beans.DipendenteBean>) request.getSession().getAttribute("dipendenti");
 	}
-    
+     
     if(listaDipendenti == null) {
 		response.sendRedirect("home.jsp");
 		return;

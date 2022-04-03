@@ -131,7 +131,36 @@ public class ConnessioneDB {
 			if(c != null) c.close();
 		}
 	}
-	
+	public static beans.SedeBean getSedeByID(int i) throws Exception{
+		Connection c = null;
+		Statement s = null;
+		beans.SedeBean sede = new beans.SedeBean();
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			String query = "SELECT Nome FROM Sede WHERE IDSede = '"+i+"'";
+			
+			ResultSet ListaSedi = s.executeQuery(query);
+			ListaSedi.next();
+			
+			sede.setNome(ListaSedi.getString("Nome"));
+			sede.setPaese(ListaSedi.getString("Paese"));
+			sede.setCitta(ListaSedi.getString("Citta"));
+			sede.setCAP(ListaSedi.getString("CAP"));
+			sede.setVia(ListaSedi.getString("Via"));
+			sede.setNCivico(ListaSedi.getInt("NCivico"));
+			sede.setTelefono(ListaSedi.getString("Telefono"));
+			
+			return sede;
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+			return null;
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+	}
     public static ArrayList<String> getSedi() throws Exception {
     	ArrayList<String> listaSedi = new ArrayList<String>();
     	Connection c = null;

@@ -26,7 +26,13 @@ public class infoSede_servlet extends HttpServlet {
 	    int id = Integer.parseInt(request.getParameter("id"));
 	    
 	    //sede
-	    
+	    try {
+			request.getSession().setAttribute("sede", ConnessioneDB.ConnessioneDB.getSedeByID(id));
+			response.sendRedirect("infoSede.jsp");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	    
 	}
 

@@ -10,7 +10,7 @@
 <body>
 
 	<ul>
-		<li> <a></a> </li>
+		<li> <a href=""></a> </li>
 	</ul>
 
 </body>
