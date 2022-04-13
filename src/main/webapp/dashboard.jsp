@@ -13,5 +13,6 @@
 		<li> <a href=""></a> </li>
 	</ul>
 
+	<a href="">Logout</a>
 </body>
 </html>

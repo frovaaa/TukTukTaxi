@@ -41,6 +41,9 @@ public class ConnessioneDB_servlet extends HttpServlet {
 		// TODO Auto-generated method stub
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
+		String remember = request.getParameter("rememberMe");
+		
+		System.out.println("\n" + remember);
 		
 		ConnessioneDB saveUtenti = new ConnessioneDB();
 		
