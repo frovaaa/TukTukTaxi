@@ -13,6 +13,6 @@
 		<li> <a href=""></a> </li>
 	</ul>
 
-	<a href="">Logout</a>
+	<a href="logout_servlet">Logout</a>
 </body>
 </html>

@@ -29,7 +29,18 @@
   		boolean logged = false;
   		if(request.getSession().getAttribute("log") != null){
   			logged = (boolean) request.getSession().getAttribute("log");
+  		}else{
+  			try{
+  				for (Cookie ck : request.getCookies()){
+  	  				if(ck.getName() == "logged"){
+  	  					logged = true;
+  	  				}
+  	  			}
+  			}catch(Exception ex){
+  				System.out.println(ex.getMessage());
+  			}
   		}
+  		
   		
   		if(!logged){ //Verifico che l'utente sia settato
   			%>

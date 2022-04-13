@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -43,14 +44,20 @@ public class ConnessioneDB_servlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String remember = request.getParameter("rememberMe");
 		
-		System.out.println("\n" + remember);
+		System.out.println("\nRemember: " + remember);
 		
 		ConnessioneDB saveUtenti = new ConnessioneDB();
 		
 		try {
 			boolean Esiste = saveUtenti.GetUtenti(username, password);
 			if(Esiste) { 
-				System.out.println("Utente trovato"); 
+				//System.out.println("Utente trovato"); 
+				if(remember == "true") {
+					Cookie ck = new Cookie("logged", "" + ConnessioneDB.GetIDUtente(username));
+					ck.setMaxAge(1209600);
+					response.addCookie(ck);
+				}
+				
 				response.sendRedirect("home.jsp");
 			} else {
 				System.out.println("Utente NON trovato");

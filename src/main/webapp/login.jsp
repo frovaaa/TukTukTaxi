@@ -28,7 +28,7 @@
       <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password">
       <div class="checkbox mb-3">
         <label>
-          <input type="checkbox" value="remember-me" name="rememberMe"> Remember me
+          <input type="checkbox" value="true" name="rememberMe"> Remember me
         </label>
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>

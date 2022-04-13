@@ -35,7 +35,30 @@ public class ConnessioneDB {
 		return connessione;
 		
 	}
-
+	
+	public static int GetIDUtente(String Username) throws Exception {
+		Connection c = null;
+		Statement s = null;
+		Boolean flag = false;
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			String query = "SELECT IDDipendente FROM Dipendente WHERE Username = '"+Username+"'";
+			
+			ResultSet ListaUtenti = s.executeQuery(query);
+			ListaUtenti.next();
+			
+			return ListaUtenti.getInt("IDDipendente");
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+		
+		return 0;
+	}
 	public static boolean GetUtenti(String Username, String Passwd) throws Exception {
 		Connection c = null;
 		Statement s = null;
@@ -118,9 +141,6 @@ public class ConnessioneDB {
 			
 			ResultSet ListaSedi = s.executeQuery(query);
 			ListaSedi.next();
-			
-			System.out.println(query);
-			System.out.println(ListaSedi.getString(1));
 			
 			return ListaSedi.getString(1);
 		}catch (SQLException ex) {
