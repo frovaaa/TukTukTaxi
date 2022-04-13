@@ -139,7 +139,7 @@ public class ConnessioneDB {
 		try {
 			c = Connetti();
 			s = c.createStatement();
-			String query = "SELECT Nome FROM Sede WHERE IDSede = '"+i+"'";
+			String query = "SELECT * FROM Sede WHERE IDSede = '"+i+"'";
 			
 			ResultSet ListaSedi = s.executeQuery(query);
 			ListaSedi.next();

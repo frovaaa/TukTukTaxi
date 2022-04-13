@@ -12,6 +12,8 @@
     if (request.getSession().getAttribute("sede") != null) {
         sede = (beans.SedeBean) request.getSession().getAttribute("sede");
     }
+    
+    System.out.println (sede);
 %>
 <!DOCTYPE html>
 <html>
@@ -26,8 +28,6 @@
     <h4>Informazioni sede</h4>
     <div class="container">
         <div class="row">
-            <label for="IDSede">IDSede</label><input name="IDSede" id="IDSede" type="number" class="form-control mb-3"
-                                                     value="<%= sede.getIDSede() %>">
             <label for="Nome">Nome</label><input name="Nome" id="Nome" type="text" class="form-control mb-3"
                                                  value="<%= sede.getNome() %>">
             <label for="Paese">Paese</label><input name="Paese" id="Paese" type="text" class="form-control mb-3"
