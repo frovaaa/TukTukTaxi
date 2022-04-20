@@ -24,8 +24,9 @@
   				try{
   	  				for (Cookie ck : request.getCookies()){
   	  					System.out.println("Nome ck: " + ck.getName());
-  	  	  				if(ck.getName() == "logged"){
+  	  	  				if(ck.getName().equals("logged")){
   	  	  					logged = true;
+  	  	  					request.getSession().setAttribute("id", ck.getValue());
   	  	  				}
   	  	  			}
   	  			}catch(Exception ex){

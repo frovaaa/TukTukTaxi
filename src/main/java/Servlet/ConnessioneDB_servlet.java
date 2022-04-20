@@ -45,6 +45,7 @@ public class ConnessioneDB_servlet extends HttpServlet {
 		String remember = request.getParameter("rememberMe");
 		
 		System.out.println("\nRemember: " + remember);
+		System.out.println("Tipo of remember: "+ remember.getClass());
 		
 		ConnessioneDB saveUtenti = new ConnessioneDB();
 		
@@ -52,7 +53,8 @@ public class ConnessioneDB_servlet extends HttpServlet {
 			boolean Esiste = saveUtenti.GetUtenti(username, password);
 			if(Esiste) { 
 				//System.out.println("Utente trovato"); 
-				if(remember == "true") {
+				if(remember.equals("true")) {
+					System.out.println("Entro nel if del cookie");
 					Cookie ck = new Cookie("logged", "" + ConnessioneDB.GetIDUtente(username));
 					ck.setMaxAge(1209600);
 					response.addCookie(ck);
