@@ -9,5 +9,7 @@
 </head>
 <body>
 <%@ include file="navBar.jsp" %>
+
+
 </body>
 </html>
