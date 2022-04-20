@@ -23,8 +23,8 @@
   			if(request.getCookies() != null){
   				try{
   	  				for (Cookie ck : request.getCookies()){
-  	  					System.out.println("Nome ck: " + ck.getName());
-  	  	  				if(ck.getName().equals("logged")){
+  	  					//System.out.println("Nome ck: " + ck.getName());
+  	  	  				if(ck.getName().equals("logged") && !ck.getValue().equals("")){
   	  	  					logged = true;
   	  	  					request.getSession().setAttribute("id", ck.getValue());
   	  	  				}

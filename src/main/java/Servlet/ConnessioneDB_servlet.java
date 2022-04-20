@@ -44,8 +44,7 @@ public class ConnessioneDB_servlet extends HttpServlet {
 		String password = request.getParameter("password");
 		String remember = request.getParameter("rememberMe");
 		
-		System.out.println("\nRemember: " + remember);
-		System.out.println("Tipo of remember: "+ remember.getClass());
+		//System.out.println("\nRemember: " + remember);
 		
 		ConnessioneDB saveUtenti = new ConnessioneDB();
 		

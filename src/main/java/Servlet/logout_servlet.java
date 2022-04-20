@@ -28,19 +28,32 @@ public class logout_servlet extends HttpServlet {
 	@SuppressWarnings("finally")
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		try {
+			boolean loggato = false;
+			
 			if(request.getSession().getAttribute("log") != null) {
-				boolean loggato = (boolean) request.getSession().getAttribute("log");
-				
-				if(loggato) {
-					request.getSession().removeAttribute("log");
-					Cookie ck = new Cookie("logged", "");
-					ck.setMaxAge(0);
-					
-					response.addCookie(ck);
-					response.sendRedirect("home.jsp");
-				}else {
-					response.sendRedirect("login.jsp");
+				loggato = (boolean) request.getSession().getAttribute("log");
+			}else {
+				if(request.getCookies() != null){
+	  				try{
+	  	  				for (Cookie ck : request.getCookies()){
+	  	  					
+	  	  	  				if(ck.getName().equals("logged") && !ck.getValue().equals("")){
+	  	  	  					loggato = true;
+	  	  	  				}
+	  	  	  			}
+	  	  			}catch(Exception ex){
+	  	  				System.out.println(ex.getMessage());
+	  	  			}	
 				}
+			}
+			
+			if(loggato) {
+				request.getSession().removeAttribute("log");
+				Cookie ck = new Cookie("logged", "");
+				ck.setMaxAge(0);
+				
+				response.addCookie(ck);
+				response.sendRedirect("home.jsp");
 			}else {
 				response.sendRedirect("login.jsp");
 			}
