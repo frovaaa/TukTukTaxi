@@ -221,6 +221,7 @@ public class ConnessioneDB {
     		while(d.next()) {
     			beans.DipendenteBean temp = new beans.DipendenteBean();
     			
+    			temp.setIDDipendente(d.getInt("IDDipendente"));
     			temp.setIDFSede(d.getInt("IDFSede"));
     			temp.setNome(d.getString("Nome"));
     			temp.setCognome(d.getString("Cognome"));

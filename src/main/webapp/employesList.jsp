@@ -41,6 +41,7 @@
 		      <th scope="col">Email</th>
 		      <th scope="col">Cellulare</th>
 		      <th scope="col">Sede</th>
+		      <th scope="col">Azioni</th>
 		    </tr>
 		  </thead>
 		  <tbody>
