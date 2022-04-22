@@ -1,15 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.5, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <title>
-    Soft UI Dashboard by Creative Tim
+    Login
   </title>
   <!--     Fonts and icons     -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -48,21 +48,6 @@
                     Dashboard
                   </a>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link me-2" href="sign-in.html">
-                    <i class="fas fa-key opacity-6 text-dark me-1"></i>
-                    Sign In
-                  </a>
-                </li>
-              </ul>
-              <li class="nav-item d-flex align-items-center">
-                <a class="btn btn-round btn-sm mb-0 btn-outline-primary me-2" target="_blank" href="https://www.creative-tim.com/builder/soft-ui?ref=navbar-dashboard">Online Builder</a>
-              </li>
-              <ul class="navbar-nav d-lg-block d-none">
-                <li class="nav-item">
-                  <a href="https://www.creative-tim.com/product/soft-ui-dashboard" class="btn btn-sm btn-round mb-0 me-1 bg-gradient-dark">Free download</a>
-                </li>
-              </ul>
             </div>
           </div>
         </nav>
@@ -95,15 +80,9 @@
                       <label class="form-check-label" for="rememberMe">Remember me</label>
                     </div>
                     <div class="text-center">
-                      <button type="button" class="btn bg-gradient-info w-100 mt-4 mb-0">Login</button>
+                      <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">Login</button>
                     </div>
                   </form>
-                </div>
-                <div class="card-footer text-center pt-0 px-lg-2 px-1">
-                  <p class="mb-4 text-sm mx-auto">
-                    Don't have an account?
-                    <a href="javascript:;" class="text-info text-gradient font-weight-bold">Sign up</a>
-                  </p>
                 </div>
               </div>
             </div>
