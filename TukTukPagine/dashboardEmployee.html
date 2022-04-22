@@ -6,7 +6,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="../src/main/webapp/assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../src/main/webapp/assets/img/favicon.png">
     <title>
-        Dashboard Esempio
+        Dashboard Dipendente
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
@@ -339,16 +339,16 @@
                         <div class="row">
                             <div class="col-8">
                                 <div class="numbers">
-                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">New Clients</p>
+                                    <p class="text-sm mb-0 text-capitalize font-weight-bold">Today's Users</p>
                                     <h5 class="font-weight-bolder mb-0">
-                                        +3,462
-                                        <span class="text-danger text-sm font-weight-bolder">-2%</span>
+                                        2,300
+                                        <span class="text-success text-sm font-weight-bolder">+3%</span>
                                     </h5>
                                 </div>
                             </div>
                             <div class="col-4 text-end">
                                 <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                                    <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+                                    <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
                                 </div>
                             </div>
                         </div>
@@ -984,6 +984,7 @@
                 </div>
             </div>
         </div>
+        <button class="btn bg-gradient-primary mb-0" onclick="Question('Sei un uomo?', 'Attento a cosa scegli', 'Si', 'No')">Test Alerts!</button>
     </div>
 </main>
 <!--   Core JS Files   -->
@@ -992,6 +993,7 @@
 <script src="../src/main/webapp/assets/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="../src/main/webapp/assets/js/plugins/smooth-scrollbar.min.js"></script>
 <script src="../src/main/webapp/assets/js/plugins/chartjs.min.js"></script>
+<script src="../src/main/webapp/assets/js/plugins/sweetalert2.all.min.js"></script>
 <script>
     var ctx = document.getElementById("chart-bars").getContext("2d");
 
@@ -1175,5 +1177,7 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="../src/main/webapp/assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
+<!--Sweet Alert Scripts-->
+<script src="../src/main/webapp/assets/js/funzioniSweetAlert.js"></script>
 </body>
 </html>
