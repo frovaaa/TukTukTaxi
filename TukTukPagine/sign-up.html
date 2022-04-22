@@ -1,77 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="apple-touch-icon" sizes="76x76" href="../src/main/webapp/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="../src/main/webapp/assets/img/favicon.png">
-  <title>
-    Registrazione
-  </title>
-  <!--     Fonts and icons     -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
-  <!-- Nucleo Icons -->
-  <link href="../src/main/webapp/assets/css/nucleo-icons.css" rel="stylesheet" />
-  <link href="../src/main/webapp/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
-  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
-  <link href="../src/main/webapp/assets/css/nucleo-svg.css" rel="stylesheet" />
-  <!-- CSS Files -->
-  <link id="pagestyle" href="../src/main/webapp/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../src/main/webapp/assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../src/main/webapp/assets/img/favicon.png">
+    <title>
+        Registrazione
+    </title>
+    <!--     Fonts and icons     -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"/>
+    <!-- Nucleo Icons -->
+    <link href="../src/main/webapp/assets/css/nucleo-icons.css" rel="stylesheet"/>
+    <link href="../src/main/webapp/assets/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <link href="../src/main/webapp/assets/css/nucleo-svg.css" rel="stylesheet"/>
+    <!-- CSS Files -->
+    <link id="pagestyle" href="../src/main/webapp/assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet"/>
 </head>
 
 <body class="">
 
 <!--Blocco da aggiungere per implementare la registrazione di un utente-->
 <div class="row my-4">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="card z-index-0">
-          <div class="card-header text-center pt-4">
-            <h5>Registra un nuovo utente</h5>
-          </div>
-          <div class="card-body">
-            <form role="form text-left">
-              <div class="mb-3">
-                <input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="email-addon">
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="email-addon">
-              </div>
-              <div class="mb-3">
-                <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="password-addon">
-              </div>
-              <div class="text-center">
-                <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Completa registrazione</button>
-              </div>
-            </form>
-          </div>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card z-index-0">
+                    <div class="card-header text-center pt-4">
+                        <h5>Registra un nuovo utente</h5>
+                    </div>
+                    <div class="card-body">
+                        <form role="form text-left">
+                            <div class="mb-3">
+                                <input type="text" class="form-control" placeholder="Name" aria-label="Name"
+                                       aria-describedby="email-addon">
+                            </div>
+                            <div class="mb-3">
+                                <input type="email" class="form-control" placeholder="Email" aria-label="Email"
+                                       aria-describedby="email-addon">
+                            </div>
+                            <div class="mb-3">
+                                <input type="password" class="form-control" placeholder="Password" aria-label="Password"
+                                       aria-describedby="password-addon">
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn bg-gradient-dark w-100 my-4 mb-2">Completa
+                                    registrazione
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
 </div>
 
 
-  <!--   Core JS Files   -->
-  <script src="../src/main/webapp/assets/js/core/popper.min.js"></script>
-  <script src="../src/main/webapp/assets/js/core/bootstrap.min.js"></script>
-  <script src="../src/main/webapp/assets/js/plugins/perfect-scrollbar.min.js"></script>
-  <script src="../src/main/webapp/assets/js/plugins/smooth-scrollbar.min.js"></script>
-  <script>
+<!--   Core JS Files   -->
+<script src="../src/main/webapp/assets/js/core/popper.min.js"></script>
+<script src="../src/main/webapp/assets/js/core/bootstrap.min.js"></script>
+<script src="../src/main/webapp/assets/js/plugins/perfect-scrollbar.min.js"></script>
+<script src="../src/main/webapp/assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
-      var options = {
-        damping: '0.5'
-      }
-      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        var options = {
+            damping: '0.5'
+        }
+        Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
-  </script>
-  <!-- Github buttons -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
-  <script src="../src/main/webapp/assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
+</script>
+<!-- Github buttons -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+<!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+<script src="../src/main/webapp/assets/js/soft-ui-dashboard.min.js?v=1.0.5"></script>
 </body>
 
 </html>
