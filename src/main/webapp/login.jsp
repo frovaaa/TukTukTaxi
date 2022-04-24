@@ -19,6 +19,7 @@
   <link href="assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- CSS Files -->
   <link id="pagestyle" href="assets/css/soft-ui-dashboard.css?v=1.0.5" rel="stylesheet" />
+  <script src="../../assets/js/plugins/datatables.js"></script>
 </head>
 
 <body class="">
