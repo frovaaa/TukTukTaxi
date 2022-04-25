@@ -59,6 +59,32 @@ public class ConnessioneDB {
 		
 		return 0;
 	}
+	public static beans.DipendenteBean GetUtenteByID(int id) throws Exception {
+		Connection c = null;
+		Statement s = null;
+		Boolean flag = false;
+		beans.DipendenteBean u = new beans.DipendenteBean();
+		
+		try {
+			c = Connetti();
+			s = c.createStatement();
+			String query = "SELECT * FROM Dipendente WHERE IDDipendente = '"+id+"'";
+			
+			ResultSet Utente = s.executeQuery(query);
+			Utente.next();
+			
+			
+			
+			return u;
+		}catch (SQLException ex) {
+			System.out.println(ex.getMessage());
+		}finally {
+			if(s != null) s.close();
+			if(c != null) c.close();
+		}
+		
+		return u;
+	}
 	public static boolean GetUtenti(String Username, String Passwd) throws Exception {
 		Connection c = null;
 		Statement s = null;
