@@ -73,7 +73,11 @@ public class ConnessioneDB {
 			ResultSet Utente = s.executeQuery(query);
 			Utente.next();
 			
-			
+			u.setIDFSede(Utente.getInt("IDFSede"));
+			u.setIDFRuolo(Utente.getInt("IDFRuolo"));
+			u.setNome(Utente.getString("Nome"));
+			u.setCognome(Utente.getString("Cognome"));
+			u.setEmail(Utente.getString("Email"));
 			
 			return u;
 		}catch (SQLException ex) {

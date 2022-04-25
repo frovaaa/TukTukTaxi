@@ -30,7 +30,7 @@
            aria-hidden="true" id="iconSidenav"></i>
         <a class="navbar-brand m-0" href=" https://demos.creative-tim.com/soft-ui-dashboard/pages/dashboard.html "
            target="_blank">
-            <img src="../src/main/webapp/assets/img/logo-ct.svg" class="navbar-brand-img h-100" alt="main_logo">
+            <img src="assets/img/logo-ct.svg" class="navbar-brand-img h-100" alt="main_logo">
             <span class="ms-1 font-weight-bold">TukTuk Taxi</span>
         </a>
     </div>

@@ -3,6 +3,7 @@ package beans;
 public class DipendenteBean implements java.io.Serializable{
 	private int IDDipendente;
 	private int IDFSede;
+	private int IDFRuolo;
 	private String Nome;
 	private String Cognome;
 	private String Cellulare;
@@ -13,6 +14,7 @@ public class DipendenteBean implements java.io.Serializable{
 	public DipendenteBean() {
 		this.IDDipendente = -1;
 		this.IDFSede = -1;
+		this.IDFRuolo = -1;
 		this.Nome = "";
 		this.Cognome = "";
 		this.Cellulare = "";
@@ -85,5 +87,10 @@ public class DipendenteBean implements java.io.Serializable{
 		Password = password;
 	}
 	
-	
+	public void setIDFRuolo(int r) {
+		IDFRuolo = r;
+	}
+	public int getIDFRuolo() {
+		return IDFRuolo;
+	}
 }
