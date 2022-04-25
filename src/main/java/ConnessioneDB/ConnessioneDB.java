@@ -271,5 +271,25 @@ public class ConnessioneDB {
     	
     	return a;
     }
-    
+        	public static boolean SetCorsa(String DataInizio, String DataFine, Int Chilometri, Float Tariffa, Int IDFDipendente) throws Exception {
+        		Connection c = null;
+        		Statement s = null;
+        		Boolean flag = false;
+
+        		try {
+        			c = Connetti();
+        			s = c.createStatement();
+
+        			String query = "INSERT INTO Corsa (IDFDipendente, DataInizio, DataFine, Chilometri, TariffaCorsa) VALUES ("+IDFDipendente+", '"+DataInizio+"', '"+DataFine+"', '"+Chilometri+"',  '"+Tariffa+"')";
+        			System.out.println(query);
+        			flag = s.execute(query);
+        		}catch (SQLException ex) {
+        			System.out.println(ex.getMessage());
+        		}finally {
+        			if(s != null) s.close();
+        			if(c != null) c.close();
+        		}
+
+        		return flag;
+        	}
 }
